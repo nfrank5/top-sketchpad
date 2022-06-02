@@ -1,0 +1,49 @@
+body {
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    background-color: rgb(193, 189, 189);
+}
+.square {
+    height: 10px;
+    width: 10px;
+    background-color:whitesmoke;
+    border: 1px;
+    border-color: black;
+    border-style:dotted;
+}
+
+.container {
+    border-color: black;
+    border: 2px;
+    border-style: solid;
+    border-radius: 8px;
+}
+.line {
+    display: flex;
+
+}
+.square-hover {
+    background-color: black;
+}
+
+.content {
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    align-items: center;
+    justify-content: center;
+}
+
+h1 {
+    text-align: center;
+}
+
+select {
+    border-radius: 8px;
+    padding: 5px;
+    font-size: 20px;
+}
+
+footer {
+    display: flex;
+    margin-left: auto   ;
+}
