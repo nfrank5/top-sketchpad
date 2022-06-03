@@ -17,12 +17,9 @@ body {
     border-style: solid;
     border-radius: 8px;
 }
+
 .line {
     display: flex;
-
-}
-.square-hover {
-    background-color: black;
 }
 
 .content {

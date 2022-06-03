@@ -1,5 +1,4 @@
 let numberOfSquaresPerSide = 32;
-
 const container = document.querySelector(".container");
 const numberOfSquares = document.querySelector(".number-of-squares");
 const colorCombo =  document.querySelector(".color");
@@ -13,14 +12,20 @@ squares.forEach(s=> s.addEventListener("mouseout", changeColor ));
 
 function changeColor(e){
     let color = colorCombo.value;
+    let currentOpacity = parseFloat(window.getComputedStyle(e.target).getPropertyValue("opacity"));
+    let currentBackgroundColor = window.getComputedStyle(e.target).getPropertyValue("background-color");
     if(color==="multicolor"){
         e.target.style.backgroundColor = `${randomColor()}`;
     } else if(color==="delete"){
         e.target.style.backgroundColor = "whitesmoke";
     } else{    
-       e.target.classList.add("square-hover");
+       if(currentBackgroundColor==="rgb(0, 0, 0)"){
+            e.target.style.opacity = currentOpacity + 0.1;
+        } else if(currentBackgroundColor !=="rgb(0, 0, 0)"){
+            e.target.style.backgroundColor = "rgb(0, 0, 0)";
+            e.target.style.opacity = 0.1;
+        }
     }
-    
 }
 
 function defineNumberOfSquares(e){
